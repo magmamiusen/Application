@@ -12,7 +12,7 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello Recepy</h1>
+        <h1>Hello Recepy. This is the final version</h1>
       </main>
     </div>
   )
