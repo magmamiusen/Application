@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import Feed from "../interface/feed";
+import Feed from "../Feed";
 
 const Initial = () => {
   const { isAuthenticated, isLoading } = useAuth0();

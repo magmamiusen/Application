@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Add from '../database/Add';
-import Get from '../database/Get';
-import LogoutButton from '../auth/Logout';
+import Add from './database/Add';
+import Get from './database/Get';
+import LogoutButton from './auth/Logout';
 
 const Feed = () => {
     return (
