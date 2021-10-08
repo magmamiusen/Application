@@ -7,7 +7,8 @@ const Add = () => {
     const { user } = useAuth0();
 
     const sent = values => {
-        dataBase.collection("recipes").add({
+        dataBase.collection('recipes')
+        .add({
             name: values.name,
             description: values.description,
             type: values.type,
@@ -15,6 +16,10 @@ const Add = () => {
             idAuthor: user.email,
             image: values.image,
             date: new Date(),
+        })
+        .then( () => {
+          console.log('New recipe added');
+          window.location.reload();
         });
     };
 
