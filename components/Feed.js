@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import style from '../styles/Feed.module.scss';
 import Add from './database/Add';
 import Get from './database/Get';
 import LogoutButton from './auth/Logout';
@@ -16,8 +17,11 @@ const Feed = () => {
             </Head>
 
             <main>
+                <nav className={style.nav} ></nav>
+                <Add />
                 <Get type="Pasteleria" />
                 <Get type="Vegetariano" />
+                <LogoutButton />
             </main>
         </div>
     );

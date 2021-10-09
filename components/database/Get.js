@@ -48,7 +48,7 @@ const Get = props => {
                                 <img src={doc.image} />
                             </article>
                             <h1>{doc.name}</h1> 
-                            <h5>👤 : {doc.author}</h5>
+                            <h5>{doc.author}</h5>
                         </motion.a>
                     );
                 })}

@@ -4,7 +4,7 @@
     gap: 20px;
     padding: 50px;
     background-color: transparent;
-    height: fit-content;
+    height: auto;
     max-width: 100%;
     overflow-x: auto;
 
@@ -13,7 +13,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: rgb(15, 15, 15);
+        background-color: rgb(50, 50, 50);
         border-radius: 100vh;
         
         &:active {
@@ -30,7 +30,6 @@
         color: rgb(255, 255, 255);
         box-shadow: 0px 10px 20px rgb(15, 15, 15);
         border-radius: 10px;
-        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -40,6 +39,7 @@
         article {
             height: 70%;
             border-radius: 10px;
+            margin: 30px 30px 0px 30px;
             
             img {
                 background-size: cover;
@@ -55,12 +55,16 @@
             color: rgb(255, 255, 255);
             margin: 0;
             font-size: 30px;
+            margin: 30px 30px 0px 30px;
         }
 
         h5 {
-            color: rgb(100, 100, 100);
+            background-color: rgb(20, 20, 20);
+            color: rgb(200, 200, 200);
             font-size: 20px;
             margin: 0;
+            padding: 30px;
+            font-weight: lighter;
         }
     }
 }
