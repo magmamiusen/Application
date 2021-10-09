@@ -16,11 +16,8 @@ const Feed = () => {
             </Head>
 
             <main>
-                <Add />
-                <Get type={user.name} />
                 <Get type="Pasteleria" />
                 <Get type="Vegetariano" />
-                <LogoutButton />
             </main>
         </div>
     );
