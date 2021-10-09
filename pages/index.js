@@ -4,7 +4,7 @@ import Initial from "../components/auth/Initial";
 
 const Index = () => {
   return (
-    <Auth0Provider domain="dev-dou8wmxc.us.auth0.com" clientId="OSpj6EyQBe7rD681JugQsNWIFVT76U48" redirectUri="https://application-pink.vercel.app/" >
+    <Auth0Provider domain="dev-dou8wmxc.us.auth0.com" clientId="OSpj6EyQBe7rD681JugQsNWIFVT76U48" redirectUri="http://localhost:3000/" >
       <div>
         <LoginButton />
         <Initial />
