@@ -1,0 +1,19 @@
+//Estos son los estilos globales de la aplicacion.
+
+//Estilos basicos de body y html.
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+//Selector de elementos personalizado.
+::selection {
+  background-color: rgb(174, 0, 255);
+  color: rgb(255, 255, 255);
+}
+
+//Barra de scroll vertical 'eliminada'.
+::-webkit-scrollbar {
+  width: 0;
+}

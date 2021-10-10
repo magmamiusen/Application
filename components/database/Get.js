@@ -1,69 +1,55 @@
+//Importacion de las funciones principales.
 import { useState } from 'react';
 import { dataBase } from './config';
 import { motion } from 'framer-motion';
-import style from '../../styles/Get.module.scss';
-import styleModal from '../../styles/Modal.module.scss';
 
+//Componente para obtener los datos desde firebase.
 const Get = props => {
 
+    //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([]);
 
+    //Funcion para obtener los datos desde firebase.
     const getDocs = () => {
-        dataBase.collection("recipes")
+
+        //Ruta y condiciones para obtener los datos desde firebase firestore
+        dataBase.collection('recipes')
         .where('type', '==', props.type)
         .get()
-        .then( querySnapshot => {
-            querySnapshot.forEach( doc => {
-                setRecipes( recipes => [doc.data(), ...recipes]);
+        .then( query => {
+            
+            //Una vez los datos han sido obtenidos, cada uno se guardara en el array de 'recipes'. 
+            query.forEach( doc => {
+                setRecipes( recipes => [...recipes, doc.data()]);
             });
         });
     };
 
-    const [ index, setIndex ] = useState(0);
-
+    //Elementos donde se mapearan los datos obtenidos de firebase firestore.
     return (
         <div>
-            <button onClick={getDocs} >obtener datos de {props.type}</button>
-            <section className={style.gallery} >
+            {/* Boton para obtener los datos desde firebase */}
+            <button onClick={() => getDocs()} >
+                obtener datos de {props.type}
+            </button>
+
+            {/* Seccion donde se mapearan los datos */}
+            <section>
                 {recipes.map(doc => {
+
+                    //Por cada elemento del array, se devuelven un elemento a con la informacion.
                     return (
-                        <motion.a 
-                            href="#open-modal"
-                            key={recipes.indexOf(doc)} 
-                            initial={{ scale: 0 }}
-                            animate={{ rotate: 360, scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 260,
-                                damping: 20
-                            }}
-                            whileHover={{ 
-                                scale: 1.05,
-                                borderColor: "rgba(249, 249, 249, 0.8)"
-                            }}
-                            whileTap={{ scale: 0.999 }}
-                            onClick={() => setIndex(recipes.indexOf(doc))}
-                        >
-                            <article>
-                                <img src={doc.image} />
-                            </article>
+                        <a key={recipes.indexOf(doc)} >
+                            <img src={doc.image} alt={doc.image} />
                             <h1>{doc.name}</h1> 
                             <h5>{doc.author}</h5>
-                        </motion.a>
+                        </a>
                     );
                 })}
             </section>
-            <section>
-                <div id="open-modal" className={styleModal.modalwindow}>
-                    <div>
-                        <a href="#" title="Close" className={styleModal.modalclose}>X</a>
-                        <h1>{recipes.length}</h1>
-                    </div>
-                </div>    
-            </section>
         </div>
     );
-
 };
 
+//Exportacion del componente Get.
 export default Get;
