@@ -69,23 +69,28 @@ const Add = () => {
       type: '', 
       description: '' 
       }} onSubmit={() => sent()} >
+      {/* formulario para ingresar la receta */}
       <Form>
+        {/* input para ingresar el nombre */}
         <Field 
           name="name" 
           type="text" 
           required 
         />
+        {/* input para ingresar la descripcion */}
         <Field 
           name="description" 
           as="textarea" 
           required 
         />
+        {/* input para ingresar la imagen */}
         <input 
           name="file" 
           type="file" 
           onChange={() => fileStore()} 
           required 
         />
+        {/* input para selecionar el tipo */}
         <Field 
           name="type" 
           as="select" 
@@ -101,6 +106,7 @@ const Add = () => {
             Vegetariano
           </option>
         </Field>
+        {/* boton para subir la receta */}
         <button type="submit" >
           Submit
         </button>

@@ -6,9 +6,9 @@ Recepy es un pequeño proyecto de estudiantes del [Cefit](https://cefit.edu.co/P
 
 Recepy fue hecho por tres estudiantes :
 
-- Juan Pablo Gutierrez Gutierrez
-- Esteban Perez Garzon
-- Cristian David Ramirez Vargas
+- Juan Pablo Gutierrez Gutierrez.
+- Esteban Perez Garzon.
+- Cristian David Ramirez Vargas.
 
 ## ¿De que se trata?.
 
@@ -16,7 +16,7 @@ Recepy es una aplicacion diseñada para subir recetas y ver las recetas de los o
 
 ## Tecnologias Usadas en recepy :
 
-Receoy aunque es una aplicacion pequeña, es una aplicacion moderna y poderosa, esta construida con las tecnologias mas modernas y poderosas del desarrollo web actual.
+Recepy aunque es una aplicacion pequeña, ha sido construida con las tecnologias mas modernas y poderosas del desarrollo web actual.
 
 Recepy fue hecha con el lenguaje de [Javascript](https://en.wikipedia.org/wiki/JavaScript), como su lenguaje principal, ademas de usar css.
 
@@ -53,6 +53,7 @@ npm run dev
 ctrl + c
 Terminate batch job (Y/N)? y
 ```
+
 ## Contribuir al proyecto.
 
 Aunque recepy fue creado como un proyecto para la tecnica del [Cefit](https://cefit.edu.co/Paginas/default.aspx), nuestra intencion es continuar actualizando a Recepy con nuevas caracteristicas y tecnologias.

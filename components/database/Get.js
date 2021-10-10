@@ -1,7 +1,6 @@
 //Importacion de las funciones principales.
 import { useState } from 'react';
 import { dataBase } from './config';
-import { motion } from 'framer-motion';
 
 //Componente para obtener los datos desde firebase.
 const Get = props => {
