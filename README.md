@@ -59,4 +59,4 @@ Aunque recepy fue creado como un proyecto para la tecnica del [Cefit](asphttps:/
 
 Si quieres ayudarnos en el desarrollo, tienes nuevas ideas o detectaste problemas en la aplicaion, puedes hacernolo saber al siguiente corre :
 
-- *** proyectzena@gmail.com ***
+- **proyectzena@gmail.com**
