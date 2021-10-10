@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recepy.
 
-## Getting Started
+Recepy es un pequeño proyecto de estudiantes del [Cefit](asphttps://cefit.edu.co/Paginas/default.aspx).
 
-First, run the development server:
+## Integrantes :
+
+Recepy fue hecho por tres estudiantes :
+
+- Juan Pablo Gutierrez Gutierrez
+- Esteban Perez Garzon
+- Cristian David Ramirez Vargas
+
+## ¿De que se trata?.
+
+Recepy es una aplicacion diseñada para subir recetas y ver las recetas de los otros usuarios dentro de la app. En recepy puedes iniciar una cuenta donde se guardaran tus recetas y tambien pordras navegar por las recetas de otros usuarios.
+
+## Tecnologias Usadas en recepy :
+
+Receoy aunque es una aplicacion pequeña, es una aplicacion moderna y poderosa, esta construida con las tecnologias mas modernas y poderosas del desarrollo web actual.
+
+Recepy fue hecha con el lenguaje de [Javascript](https://en.wikipedia.org/wiki/JavaScript), como su lenguaje principal, ademas de usar css.
+
+Para que toda la aplicacion funcione no solo hemos usado [Javascript](https://en.wikipedia.org/wiki/JavaScript) sino tambien Frameworks y servicios modernos.
+
+### Servisios y Frameworks usados en la aplicacion :
+
+- [Next js - documentacion](https://nextjs.org/docs/getting-started)
+- [Vercel](https://vercel.com/)
+- [Firebase - documentacion web](https://firebase.google.com/docs/web/setup)
+- [Formik - documentacion](https://formik.org/docs/overview)
+- [Github](https://github.com/)
+- [Git](https://git-scm.com/)
+- [Sass - documentacion](https://sass-lang.com/guide)
+- [Auth0](https://auth0.com/)
+
+## Explora el proyecto.
+
+Si deseas explorar como esta construido Recepy desde adentro, puedes descargar el codigo desde este repositorio.
+
+Una vez tengas instalado el repositorio en tu computadora, puedes iniciar el servidor local con el siguiente comando, recuarda escribirlo adentro de la carpeta del proyecto desde `terminal` o la `consola`.
+
+1. inica el servidor local :
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. abre en tu navegador ([chrome](https://www.google.com/chrome/?brand=BNSD&gclid=Cj0KCQjwnoqLBhD4ARIsAL5JedJZKRsiisjfqdyPsW1eWgsZ7mmzrpCk981LreR7YXlatV2E0CVKSXYaAgpZEALw_wcB&gclsrc=aw.ds) como recomendado), una vez estes en el navegador ingresa al [localhost](http://localhost:3000/).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. cuando termines de explorar el proyecto de forma local, puedes terminar el servidor local con el siguiente comando :
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+ctrl + c
+Terminate batch job (Y/N)? y
+```
+## Contribuir al proyecto.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Aunque recepy fue creado como un proyecto para la tecnica del [Cefit](asphttps://cefit.edu.co/Paginas/default.aspx), nuestra intencion es continuar actualizando a Recepy con nuevas caracteristicas y tecnologias.
 
-## Learn More
+Si quieres ayudarnos en el desarrollo, tienes nuevas ideas o detectaste problemas en la aplicaion, puedes hacernolo saber al siguiente corre :
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [*** proyectzena@gmail.com ***](https://www.google.com/gmail/)
