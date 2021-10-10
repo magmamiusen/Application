@@ -1,6 +1,6 @@
 # Recepy.
 
-Recepy es un pequeño proyecto de estudiantes del [Cefit](asphttps://cefit.edu.co/Paginas/default.aspx).
+Recepy es un pequeño proyecto de estudiantes del [Cefit](https://cefit.edu.co/Paginas/default.aspx).
 
 ## Integrantes :
 
@@ -55,7 +55,7 @@ Terminate batch job (Y/N)? y
 ```
 ## Contribuir al proyecto.
 
-Aunque recepy fue creado como un proyecto para la tecnica del [Cefit](asphttps://cefit.edu.co/Paginas/default.aspx), nuestra intencion es continuar actualizando a Recepy con nuevas caracteristicas y tecnologias.
+Aunque recepy fue creado como un proyecto para la tecnica del [Cefit](https://cefit.edu.co/Paginas/default.aspx), nuestra intencion es continuar actualizando a Recepy con nuevas caracteristicas y tecnologias.
 
 Si quieres ayudarnos en el desarrollo, tienes nuevas ideas o detectaste problemas en la aplicaion, puedes hacernolo saber al siguiente corre :
 
