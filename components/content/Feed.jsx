@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Add from '../database/Add';
 import LogoutButton from '../auth/Logout';
 import GeneralGet from '../database/GeneralGet';
+import Link from 'next/link';
+import style from '../../styles/content/Feed.module.scss';
+import { motion } from 'framer-motion';
 
 //Componente padre para mostrar el contenido de la pagina.
 const Feed = () => {
@@ -38,6 +41,39 @@ const Feed = () => {
 
             {/* Contenido principal de la pagina */}
             <main>
+                <section className={style.bar} ></section>
+
+                {/* Contenedor de los bloques de enlace */}
+                <section className={style.wrapper} >
+
+                    {/* Enlace a la sesion de 'Reposteria' */}
+                    <Link href="#" >
+                        <a className={style.item} >
+                            🎂
+                        </a>
+                    </Link>
+
+                    {/* Enlace a la sesion de 'vegetariana' */}
+                    <Link href="#" >
+                        <a className={style.item} >
+                            🍅
+                        </a>
+                    </Link>
+
+                    {/* Enlace a */}
+                    <Link href="#" >
+                        <a className={style.item} >
+                            🥩
+                        </a>
+                    </Link>
+
+                    {/* Enlace a */}
+                    <Link href="#" >
+                        <a className={style.item} >
+                            🍽️
+                        </a>
+                    </Link>
+                </section>
                 <GeneralGet type="Pasteleria" />
             </main>
         </div>

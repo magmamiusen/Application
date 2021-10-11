@@ -4,8 +4,7 @@ import {
     useState 
 } from 'react';
 import { dataBase } from './config';
-import style from '../../styles/database/Get.module.scss'
-import Image from 'next/image';
+import style from '../../styles/database/Get.module.scss';
 
 //Componente para obtener los datos desde firebase.
 const GeneralGet = props => {
@@ -39,16 +38,16 @@ const GeneralGet = props => {
 
                     //Por cada elemento del array, se devuelven un elemento a con la informacion.
                     return (
-                        <div 
+                        <a 
                             className={style.item} 
                             key={recipes.indexOf(doc)}
+                            href="#"
                         >
+                            {/* Imagen de la receta */}
                             <div className={style.image} >
-                                <img 
-                                    src={doc.image} 
-                                    alt={doc.image} 
-                                />
+                                <div style={{backgroundImage: `url(${doc.image})`}} ></div>
                             </div>
+                            {/* Contenido de la receta como nombre, autor y tipo */}
                             <div className={style.content} >
                                 <h1>
                                     {doc.name}
@@ -60,7 +59,7 @@ const GeneralGet = props => {
                                     {doc.type}
                                 </h3>
                             </div>
-                        </div>
+                        </a>
                     );
                 })}
             </section>
