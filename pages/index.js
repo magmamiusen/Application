@@ -9,8 +9,8 @@ import Initial from "../components/auth/Initial";
 const Index = () => {
   return (
     <Auth0Provider 
-      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN_URL} 
-      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID} 
+      domain="dev-dou8wmxc.us.auth0.com"
+      clientId="OSpj6EyQBe7rD681JugQsNWIFVT76U48"
       redirectUri="https://application-pink.vercel.app/" 
     >
       <div>
