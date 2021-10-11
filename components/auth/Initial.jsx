@@ -10,7 +10,7 @@ const Initial = () => {
   //Cuando el usuario ha sido autenticado con Auth0, aparecera cargando la informacion.
   if (isLoading) {
     return (
-      <div>
+      <div style={{color:'white'}}>
         Loading ...
       </div>
     );

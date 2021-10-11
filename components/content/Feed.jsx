@@ -45,14 +45,42 @@ const Feed = () => {
             {/* Contenido principal de la pagina */}
             <main>
                 <section className={style.navbar} >
-                    <motion.a href="#" >
+                    <motion.a 
+                        href="#"
+                        className={style.item}
+                        title="Agrega una receta"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ 
+                            delay: 1,
+                            duration: 0
+                        }}
+                    >
                         +
-                    </motion.a>
-                    <motion.a href="#" >
-                        ?
                     </motion.a>
                     <motion.a 
                         href="#"
+                        className={style.item}
+                        title="Saber mas sobre recepy"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ 
+                            delay: 1.2,
+                            duration: 0
+                        }}
+                    >
+                        ?
+                    </motion.a>
+                    <motion.a 
+                        title={user.name}
+                        className={style.item}
+                        href="#"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ 
+                            delay: 1.4,
+                            duration: 0
+                        }}
                         style={{backgroundImage: `url(${user.picture})`}}
                     >
                     </motion.a>
@@ -125,7 +153,11 @@ const Feed = () => {
                         </motion.a>
                     </Link>
                 </section>
-                <GeneralGet isGeneral={true} />
+                <h1 className={style.title} >
+                    Explorar Recetas
+                </h1>
+                <GeneralGet />
+                <LogoutButton />
             </main>
         </div>
     );
