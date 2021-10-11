@@ -4,9 +4,10 @@ import {
     useState 
 } from 'react';
 import { dataBase } from './config';
+import style from '../../styles/Get.module.scss'
 
 //Componente para obtener los datos desde firebase.
-const Get = props => {
+const GeneralGet = props => {
 
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([]);
@@ -17,7 +18,6 @@ const Get = props => {
         //funcion para guardar la lista de datos que obtenemos
         const listGet = async () => {
             const list = await dataBase.collection('recipes')
-            .where('type', '==', props.type)
             .get()
 
             //Asignacion de la lista dentro de nuestro array
@@ -33,16 +33,33 @@ const Get = props => {
         <div>
 
             {/* Seccion donde se mapearan los datos */}
-            <section>
+            <section className={style.wrapper} >
                 {recipes.map(doc => {
 
                     //Por cada elemento del array, se devuelven un elemento a con la informacion.
                     return (
-                        <a key={recipes.indexOf(doc)} >
-                            <img src={doc.image} alt={doc.image} />
-                            <h1>{doc.name}</h1> 
-                            <h5>{doc.author}</h5>
-                        </a>
+                        <div 
+                            className={style.item} 
+                            key={recipes.indexOf(doc)}
+                        >
+                            <div className={style.image} >
+                                <img 
+                                    src={doc.image} 
+                                    alt={doc.image} 
+                                />
+                            </div>
+                            <div className={style.content} >
+                                <h1>
+                                    {doc.name}
+                                </h1>
+                                <h3>
+                                    {doc.author}
+                                </h3>
+                                <h3>
+                                    {doc.type}
+                                </h3>
+                            </div>
+                        </div>
                     );
                 })}
             </section>
@@ -51,4 +68,4 @@ const Get = props => {
 };
 
 //Exportacion del componente Get.
-export default Get;
+export default GeneralGet;

@@ -1,8 +1,8 @@
 //Importacion de los componentes principales.
 import Head from 'next/head';
 import Add from '../database/Add';
-import Get from '../database/Get';
 import LogoutButton from '../auth/Logout';
+import GeneralGet from '../database/GeneralGet';
 
 //Componente padre para mostrar el contenido de la pagina.
 const Feed = () => {
@@ -38,10 +38,7 @@ const Feed = () => {
 
             {/* Contenido principal de la pagina */}
             <main>
-                <Add />
-                <Get type="Pasteleria" />
-                <Get type="Vegetariano" />
-                <LogoutButton />
+                <GeneralGet type="Pasteleria" />
             </main>
         </div>
     );

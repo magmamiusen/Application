@@ -1,0 +1,80 @@
+//Contenedor donde se renderiza nuestra lista de datos
+.wrapper {
+    margin: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    overflow: auto;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    gap: 30px;
+
+    .item {  
+
+        //Contenedor de la imagen 
+        .image {
+            padding: 5px;
+            height: fit-content;
+            width: fit-content;
+            border: solid 4px transparent;
+            border-radius: 20px;
+            transition: 333ms;
+            cursor: pointer;
+
+            //Propiedades de la imagen, para que siempre sea la misma
+            img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            //Hover sobre el contenedor para el color del borde y el cambio de tamaño
+            &:hover {
+                border-color: rgba(249, 249, 249, 0.8);
+                transform: scale(1.02);
+                
+                //Efecto de la luz en la imagen
+                img {
+                    box-shadow: 0px 0px 50px rgba(255, 196, 0, 0.438);
+                }
+            }
+        }
+
+        //Contenedor de la informacion de la receta
+        .content {
+            padding: 10px;
+
+            //Estilo del titulo de la receta
+            h1 {
+                font-size: 30px;
+                margin: 0;
+                color: rgb(255, 255, 255);
+            }
+
+            //Estilo de los subtitulos de la receta
+            h3 {
+                font-size: 20px;
+                margin: 0;
+                color: rgb(150, 150, 150);
+            }
+        }
+    }
+
+    //scrollbar del contenedor de las recetas
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    //scrollnar-thumb de el contenedor
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(249, 249, 249, 0.8);
+        border-radius: 999px;
+    }
+
+    //Estilo del scrollnar-thumb al ser clickeado
+    &::-webkit-scrollbar-thumb:active {
+        background-color: rgba(249, 249, 249, 1);
+    }
+}
