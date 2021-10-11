@@ -6,9 +6,12 @@ import GeneralGet from '../database/GeneralGet';
 import Link from 'next/link';
 import style from '../../styles/content/Feed.module.scss';
 import { motion } from 'framer-motion';
+import { useAuth0 } from '@auth0/auth0-react';
 
 //Componente padre para mostrar el contenido de la pagina.
 const Feed = () => {
+    const { user } = useAuth0();
+
     return (
         <div>
             {/* Componente Head para los meta datos de la pagina principal */}
@@ -41,40 +44,85 @@ const Feed = () => {
 
             {/* Contenido principal de la pagina */}
             <main>
-                <section className={style.bar} ></section>
+                <section className={style.navbar} >
+                    <motion.a>
+                        +
+                    </motion.a>
+                    <motion.a>
+                        ?
+                    </motion.a>
+                    <motion.a style={{backgroundImage: `url(${user.picture})`}} >
+                    </motion.a>
+                </section>
 
                 {/* Contenedor de los bloques de enlace */}
                 <section className={style.wrapper} >
 
                     {/* Enlace a la sesion de 'Reposteria' */}
                     <Link href="#" >
-                        <a className={style.item} >
+                        <motion.a 
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ 
+                                delay: 1,
+                                duration: 0
+                            }}
+                            className={ style.item }
+                            title="Reposteria"
+                        >
                             🎂
-                        </a>
+                        </motion.a>
                     </Link>
 
                     {/* Enlace a la sesion de 'vegetariana' */}
                     <Link href="#" >
-                        <a className={style.item} >
-                            🍅
-                        </a>
+                        <motion.a 
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ 
+                                delay: 1.2, 
+                                duration: 0
+                            }}
+                            className={ style.item }
+                            title="Parrilla"
+                        >
+                            🥕
+                        </motion.a>
                     </Link>
 
-                    {/* Enlace a */}
+                    {/* Enlace a la sesion de 'vegetariana' */}
                     <Link href="#" >
-                        <a className={style.item} >
+                        <motion.a 
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ 
+                                delay: 1.4 ,
+                                duration: 0
+                            }}
+                            className={ style.item }
+                            title="Parrilla"
+                        >
                             🥩
-                        </a>
+                        </motion.a>
                     </Link>
 
-                    {/* Enlace a */}
+                    {/* Enlace a la sesion de 'restaurante' */}
                     <Link href="#" >
-                        <a className={style.item} >
+                        <motion.a 
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ 
+                                delay: 1.6,
+                                duration: 0
+                            }}
+                            className={ style.item }
+                            title="Restaurante"
+                        >
                             🍽️
-                        </a>
+                        </motion.a>
                     </Link>
                 </section>
-                <GeneralGet type="Pasteleria" />
+                <GeneralGet isGeneral={true} />
             </main>
         </div>
     );
