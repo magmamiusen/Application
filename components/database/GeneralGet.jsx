@@ -4,7 +4,8 @@ import {
     useState 
 } from 'react';
 import { dataBase } from './config';
-import style from '../../styles/Get.module.scss'
+import style from '../../styles/database/Get.module.scss'
+import Image from 'next/image';
 
 //Componente para obtener los datos desde firebase.
 const GeneralGet = props => {

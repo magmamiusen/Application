@@ -14,9 +14,8 @@
 
         //Contenedor de la imagen 
         .image {
+            position: relative;
             padding: 5px;
-            height: fit-content;
-            width: fit-content;
             border: solid 4px transparent;
             border-radius: 20px;
             transition: 333ms;
@@ -36,7 +35,7 @@
                 transform: scale(1.02);
                 
                 //Efecto de la luz en la imagen
-                img {
+                img {    
                     box-shadow: 0px 0px 50px rgba(255, 196, 0, 0.438);
                 }
             }
