@@ -45,13 +45,16 @@ const Feed = () => {
             {/* Contenido principal de la pagina */}
             <main>
                 <section className={style.navbar} >
-                    <motion.a>
+                    <motion.a href="#" >
                         +
                     </motion.a>
-                    <motion.a>
+                    <motion.a href="#" >
                         ?
                     </motion.a>
-                    <motion.a style={{backgroundImage: `url(${user.picture})`}} >
+                    <motion.a 
+                        href="#"
+                        style={{backgroundImage: `url(${user.picture})`}}
+                    >
                     </motion.a>
                 </section>
 
