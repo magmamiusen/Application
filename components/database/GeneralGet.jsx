@@ -13,43 +13,21 @@ const GeneralGet = props => {
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([]);
 
-    if ( props.isGeneral == true ) {
-
-        //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
-        useEffect( () => {
+   //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
+   useEffect( () => {
             
-            //funcion para guardar la lista de datos que obtenemos
-            const listGet = async () => {
-                const list = await dataBase.collection('recipes')
-                .get()
+        //funcion para guardar la lista de datos que obtenemos
+        const listGet = async () => {
+            const list = await dataBase.collection('recipes')
+            .get()
 
-                //Asignacion de la lista dentro de nuestro array
-                setRecipes(list.docs.map(doc => doc.data()));
-            };
+            //Asignacion de la lista dentro de nuestro array
+            setRecipes(list.docs.map(doc => doc.data()));
+        };
 
-            //Inicializacion de la funcion
-            listGet();
-        }, [props.type]);
-
-    } else if ( props.isGeneral == false ) {
-
-        //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
-        useEffect( () => {
-            
-            //funcion para guardar la lista de datos que obtenemos
-            const listGet = async () => {
-                const list = await dataBase.collection('recipes')
-                .where(props.type, '==', props.value)
-                .get()
-
-                //Asignacion de la lista dentro de nuestro array
-                setRecipes(list.docs.map(doc => doc.data()));
-            };
-
-            //Inicializacion de la funcion
-            listGet();
-        }, [props.type]);
-    };
+        //Inicializacion de la funcion
+        listGet();
+    }, [props.type]);
 
     //Elementos donde se mapearan los datos obtenidos de firebase firestore.
     return (
