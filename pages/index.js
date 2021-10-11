@@ -11,7 +11,7 @@ const Index = () => {
     <Auth0Provider 
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN_URL} 
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID} 
-      redirectUri="application-pink.vercel.app/" 
+      redirectUri="https://application-pink.vercel.app/" 
     >
       <div>
         <LoginButton />
