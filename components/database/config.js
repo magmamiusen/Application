@@ -1,4 +1,4 @@
-//Importacion de los servicios que usaremos en la aplicacion.
+//Importacion de los servicios que usaremos en la aplicacion(aunque estamos usando firebase v9, usaremos las version compat para usar las caracteristicas de la v8).
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';

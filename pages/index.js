@@ -8,7 +8,11 @@ import Initial from "../components/auth/Initial";
 //Componente padre para redirigir a Auth0 y mostrar contenido de recepy.
 const Index = () => {
   return (
-    <Auth0Provider domain="dev-dou8wmxc.us.auth0.com" clientId="OSpj6EyQBe7rD681JugQsNWIFVT76U48" redirectUri="http://localhost:3000/" >
+    <Auth0Provider 
+      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN_URL} 
+      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID} 
+      redirectUri="http://localhost:3000/" 
+    >
       <div>
         <LoginButton />
         <Initial />

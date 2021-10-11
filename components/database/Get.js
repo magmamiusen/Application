@@ -1,5 +1,8 @@
 //Importacion de las funciones principales.
-import { useState } from 'react';
+import { 
+    useEffect,
+    useState 
+} from 'react';
 import { dataBase } from './config';
 
 //Componente para obtener los datos desde firebase.
@@ -8,29 +11,21 @@ const Get = props => {
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([]);
 
-    //Funcion para obtener los datos desde firebase.
-    const getDocs = () => {
-
-        //Ruta y condiciones para obtener los datos desde firebase firestore
-        dataBase.collection('recipes')
+    //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
+    useEffect( async() => {
+        
+        //Variable para guardar la lista de datos que obtenemos
+        const list = await dataBase.collection('recipes')
         .where('type', '==', props.type)
         .get()
-        .then( query => {
-            
-            //Una vez los datos han sido obtenidos, cada uno se guardara en el array de 'recipes'. 
-            query.forEach( doc => {
-                setRecipes( recipes => [...recipes, doc.data()]);
-            });
-        });
-    };
+
+        //Asignacion de la lista dentro de nuestro array
+        setRecipes(list.docs.map(doc => doc.data()));
+    });
 
     //Elementos donde se mapearan los datos obtenidos de firebase firestore.
     return (
         <div>
-            {/* Boton para obtener los datos desde firebase */}
-            <button onClick={() => getDocs()} >
-                obtener datos de {props.type}
-            </button>
 
             {/* Seccion donde se mapearan los datos */}
             <section>
