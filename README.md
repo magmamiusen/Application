@@ -1,5 +1,7 @@
 # Recepy.
 
+![image](https://cdn.discordapp.com/attachments/848047002898137098/889674441804636220/unknown.png)
+
 Recepy es un pequeño proyecto de estudiantes del [Cefit](https://cefit.edu.co/Paginas/default.aspx).
 
 ## Integrantes :
