@@ -21,7 +21,7 @@ const Get = props => {
 
         //Asignacion de la lista dentro de nuestro array
         setRecipes(list.docs.map(doc => doc.data()));
-    });
+    }, [props.type]);
 
     //Elementos donde se mapearan los datos obtenidos de firebase firestore.
     return (
