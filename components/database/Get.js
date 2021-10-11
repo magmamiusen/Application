@@ -12,15 +12,20 @@ const Get = props => {
     const [ recipes, setRecipes ] = useState([]);
 
     //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
-    useEffect( async() => {
+    useEffect( () => {
         
-        //Variable para guardar la lista de datos que obtenemos
-        const list = await dataBase.collection('recipes')
-        .where('type', '==', props.type)
-        .get()
+        //funcion para guardar la lista de datos que obtenemos
+        const listGet = async () => {
+            const list = await dataBase.collection('recipes')
+            .where('type', '==', props.type)
+            .get()
 
-        //Asignacion de la lista dentro de nuestro array
-        setRecipes(list.docs.map(doc => doc.data()));
+            //Asignacion de la lista dentro de nuestro array
+            setRecipes(list.docs.map(doc => doc.data()));
+        };
+
+        //Inicializacion de la funcion
+        listGet();
     }, [props.type]);
 
     //Elementos donde se mapearan los datos obtenidos de firebase firestore.
