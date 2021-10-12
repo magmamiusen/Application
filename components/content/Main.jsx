@@ -1,10 +1,9 @@
 //Importacion de los componentes principales.
 import Head from 'next/head';
-import Add from '../database/Add';
 import LogoutButton from '../auth/Logout';
-import GeneralGet from '../database/GeneralGet';
+import Get from '../database/Get';
 import Link from 'next/link';
-import style from '../../styles/content/Feed.module.scss';
+import style from '../../styles/content/Main.module.scss';
 import { motion } from 'framer-motion';
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -85,12 +84,14 @@ const Feed = () => {
                     >
                     </motion.a>
                 </section>
-
+                <section className={style.show} >
+                    <h1>fdsgsdg</h1>
+                </section>
                 {/* Contenedor de los bloques de enlace */}
                 <section className={style.wrapper} >
 
                     {/* Enlace a la sesion de 'Reposteria' */}
-                    <Link href="#" >
+                    <Link href="/explore/reposteria" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -106,7 +107,7 @@ const Feed = () => {
                     </Link>
 
                     {/* Enlace a la sesion de 'vegetariana' */}
-                    <Link href="#" >
+                    <Link href="/explore/vegetariano" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -115,14 +116,14 @@ const Feed = () => {
                                 duration: 0
                             }}
                             className={ style.item }
-                            title="Parrilla"
+                            title="Vegetariano"
                         >
                             🥕
                         </motion.a>
                     </Link>
 
                     {/* Enlace a la sesion de 'vegetariana' */}
-                    <Link href="#" >
+                    <Link href="/explore/parrilla" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -138,7 +139,7 @@ const Feed = () => {
                     </Link>
 
                     {/* Enlace a la sesion de 'restaurante' */}
-                    <Link href="#" >
+                    <Link href="/explore/restaurante" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -156,7 +157,7 @@ const Feed = () => {
                 <h1 className={style.title} >
                     Explorar Recetas
                 </h1>
-                <GeneralGet />
+                <Get />
                 <LogoutButton />
             </main>
         </div>

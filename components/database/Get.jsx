@@ -43,11 +43,6 @@ const GeneralGet = props => {
                             className={style.item} 
                             key={recipes.indexOf(doc)}
                             href="#"
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ 
-                                duration: 0
-                            }}
                         >
                             {/* Imagen de la receta */}
                             <div 
