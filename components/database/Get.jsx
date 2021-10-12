@@ -13,8 +13,8 @@ const GeneralGet = props => {
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([]);
 
-   //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
-   useEffect( () => {
+    //Uso del useEffect para hacer que los datos sean obtenidos una vez sea cargado el componente
+    useEffect( () => {
             
         //funcion para guardar la lista de datos que obtenemos
         const listGet = async () => {

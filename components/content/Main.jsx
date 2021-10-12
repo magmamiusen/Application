@@ -1,11 +1,12 @@
 //Importacion de los componentes principales.
 import Head from 'next/head';
-import LogoutButton from './auth/Logout';
-import Get from './database/Get';
+import LogoutButton from '../auth/Logout';
+import Get from '../database/Get';
 import Link from 'next/link';
-import style from '../styles/content/Main.module.scss';
+import style from '../../styles/content/Main.module.scss';
 import { motion } from 'framer-motion';
 import { useAuth0 } from '@auth0/auth0-react';
+import Special from '../database/Special';
 
 //Componente padre para mostrar el contenido de la pagina.
 const Feed = () => {
@@ -44,7 +45,7 @@ const Feed = () => {
             {/* Contenido principal de la pagina */}
             <main>
                 <section className={style.navbar} >
-                    <motion.a 
+                <motion.a 
                         href="#"
                         className={style.item}
                         title="Agrega una receta"
@@ -84,9 +85,13 @@ const Feed = () => {
                     >
                     </motion.a>
                 </section>
-                <section className={style.show} >
-                    <h1>fdsgsdg</h1>
-                </section>
+                <h1 className={style.title} >
+                    Recetas Destacadas
+                </h1>
+                <Special />
+                <h1 className={style.title} >
+                    Tipos De Recetas
+                </h1>
                 {/* Contenedor de los bloques de enlace */}
                 <section className={style.wrapper} >
 

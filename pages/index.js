@@ -12,7 +12,7 @@ const Index = () => {
     <Auth0Provider 
       domain="dev-dou8wmxc.us.auth0.com"
       clientId="OSpj6EyQBe7rD681JugQsNWIFVT76U48"
-      redirectUri="http://localhost:3000/" 
+      redirectUri="https://application-pink.vercel.app/home/lobby" 
     >
       <div> 
         <LoginButton />
