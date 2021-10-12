@@ -3,7 +3,7 @@ import Head from 'next/head';
 import LogoutButton from './auth/Logout';
 import Get from './database/Get';
 import Link from 'next/link';
-import style from '../../styles/content/Main.module.scss';
+import style from '../styles/content/Main.module.scss';
 import { motion } from 'framer-motion';
 import { useAuth0 } from '@auth0/auth0-react';
 
