@@ -95,8 +95,8 @@ const Feed = () => {
                 {/* Contenedor de los bloques de enlace */}
                 <section className={style.wrapper} >
 
-                    {/* Enlace a la sesion de 'Reposteria' */}
-                    <Link href="/explore/reposteria" >
+                    {/* Enlace a la sesion de 'Pasteleria' */}
+                    <Link href="/home/pasteleria" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -112,7 +112,7 @@ const Feed = () => {
                     </Link>
 
                     {/* Enlace a la sesion de 'vegetariana' */}
-                    <Link href="/explore/vegetariano" >
+                    <Link href="/home/vegetariano" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}

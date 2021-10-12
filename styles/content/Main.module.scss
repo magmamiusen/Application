@@ -77,6 +77,14 @@
             }
         }
     }
+
+    @media ( max-width: 1000px ) {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar{
+            height: 0;
+        }
+    }
 }
 
 .title {

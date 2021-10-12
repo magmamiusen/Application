@@ -1,0 +1,21 @@
+.wrapper {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(300px, 1fr);
+    gap: 20px;
+    margin: 40px;
+
+    div {
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        border: solid 4px rgb(30, 30, 30);
+        transition: 333ms;
+        cursor: pointer;
+
+        &:hover {
+            border-color: rgba(249, 249, 249, 0.8);
+        }
+    }
+}
