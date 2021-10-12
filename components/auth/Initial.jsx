@@ -1,6 +1,6 @@
 //Importaciones de los componentes.
 import { useAuth0 } from '@auth0/auth0-react';
-import Main from '../content/main';
+import Main from '../Main';
 
 //Componente Initial, que carga la aplicacion cuando el usuario esta autenticado.
 const Initial = () => {

@@ -1,7 +1,7 @@
 //Importacion de los componentes principales.
 import Head from 'next/head';
-import LogoutButton from '../auth/Logout';
-import Get from '../database/Get';
+import LogoutButton from './auth/Logout';
+import Get from './database/Get';
 import Link from 'next/link';
 import style from '../../styles/content/Main.module.scss';
 import { motion } from 'framer-motion';
