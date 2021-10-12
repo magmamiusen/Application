@@ -43,6 +43,7 @@ const GeneralGet = props => {
                             className={style.item} 
                             key={recipes.indexOf(doc)}
                             href="#"
+
                         >
                             {/* Imagen de la receta */}
                             <div 

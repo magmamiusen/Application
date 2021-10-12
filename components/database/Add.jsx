@@ -110,6 +110,12 @@ const Add = () => {
           <option value="Vegetariano" >
             Vegetariano
           </option>
+          <option value="Parrilla" >
+            Parrilla
+          </option>
+          <option value="Otro" >
+            Otro
+          </option>
         </Field>
         {/* boton para subir la receta */}
         <button type="submit" >

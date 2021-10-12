@@ -26,13 +26,14 @@ const GetType = props => {
     return (
         <section className={style.wrapper} >
             {recipes.map(doc => {
+
                 return (
                     <motion.div 
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ 
                             duration: 0,
-                            delay: 0
+                            delay: '1.' + recipes.indexOf(doc) + 2
                         }}
                         style={{backgroundImage: `url(${doc.image})`}} 
                         key={recipes.indexOf(doc)}

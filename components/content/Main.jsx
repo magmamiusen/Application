@@ -85,13 +85,29 @@ const Feed = () => {
                     >
                     </motion.a>
                 </section>
-                <h1 className={style.title} >
+                <motion.h1 
+                    className={style.title} 
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                        delay: 1.6,
+                        duration: 0
+                    }}
+                >
                     Recetas Destacadas
-                </h1>
+                </motion.h1>
                 <Special />
-                <h1 className={style.title} >
+                <motion.h1 
+                    className={style.title}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                        delay: 1.6,
+                        duration: 0
+                    }}
+                >
                     Tipos De Recetas
-                </h1>
+                </motion.h1>
                 {/* Contenedor de los bloques de enlace */}
                 <section className={style.wrapper} >
 
@@ -128,7 +144,7 @@ const Feed = () => {
                     </Link>
 
                     {/* Enlace a la sesion de 'vegetariana' */}
-                    <Link href="/explore/parrilla" >
+                    <Link href="/home/parrilla" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -144,7 +160,7 @@ const Feed = () => {
                     </Link>
 
                     {/* Enlace a la sesion de 'restaurante' */}
-                    <Link href="/explore/restaurante" >
+                    <Link href="/home/otro" >
                         <motion.a 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -153,15 +169,23 @@ const Feed = () => {
                                 duration: 0
                             }}
                             className={ style.item }
-                            title="Restaurante"
+                            title="Otro"
                         >
-                            🍽️
+                            🐱‍💻
                         </motion.a>
                     </Link>
                 </section>
-                <h1 className={style.title} >
+                <motion.h1 
+                    className={style.title} 
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                        delay: 1.6,
+                        duration: 0
+                    }}
+                >
                     Explorar Recetas
-                </h1>
+                </motion.h1>
                 <Get />
                 <LogoutButton />
             </main>
