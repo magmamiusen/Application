@@ -16,7 +16,6 @@ const Index = () => {
     >
       <div> 
         <LoginButton />
-        <Initial />
       </div>
     </Auth0Provider>
   );

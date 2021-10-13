@@ -7,6 +7,7 @@ import style from '../../styles/content/Main.module.scss';
 import { motion } from 'framer-motion';
 import { useAuth0 } from '@auth0/auth0-react';
 import Special from '../database/Special';
+import Add from '../database/Add';
 
 //Componente padre para mostrar el contenido de la pagina.
 const Feed = () => {
@@ -46,7 +47,7 @@ const Feed = () => {
             <main>
                 <section className={style.navbar} >
                 <motion.a 
-                        href="#"
+                        href="#open-modal"
                         className={style.item}
                         title="Agrega una receta"
                         initial={{ scale: 0 }}
@@ -188,6 +189,14 @@ const Feed = () => {
                 </motion.h1>
                 <Get />
                 <LogoutButton />
+                <section>
+                    <div id="open-modal" className={style.modalOpen}>
+                        <div>
+                            <a href="#" title="Close" >X</a>
+                            <Add />
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     );
