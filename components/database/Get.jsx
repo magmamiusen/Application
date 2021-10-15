@@ -13,7 +13,7 @@ const GeneralGet = props => {
 
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([{ 
-        name: ",
+        name: "",
     },]);
     const [ index, setIndex ] = useState(0);
 

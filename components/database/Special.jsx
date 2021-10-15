@@ -13,7 +13,7 @@ const Special = () => {
 
     //uso del estado para almacenar las recetas
     const [ recipes, setRecipes ] = useState([{ 
-        name: ",
+        name: "",
     },]);
     const [ index, setIndex ] = useState(0);
 
