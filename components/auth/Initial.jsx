@@ -19,7 +19,10 @@ const Initial = () => {
   //Cuando esta autenticado y ya ha cargado, se renderizara el componente Feed.
   return (
     isAuthenticated && (
-      <Main />
+      <>
+        {/* Componente de la pagina principal */}
+        <Main />
+      </>
     )
   );
 };

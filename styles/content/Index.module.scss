@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+.wall {    
+    background: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url('/wallpaper.jpg');
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    h1 {
+        font-family: 'Italianno', cursive;
+        color: rgb(255, 0, 0);
+        font-size: 40vh;
+        text-shadow: 10px 5px 0px rgb(255, 255, 255);
+        user-select: none;
+    }
+}

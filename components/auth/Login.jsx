@@ -1,5 +1,6 @@
 //Importacion del hook proporcionado por Auth0.
 import { useAuth0 } from '@auth0/auth0-react';
+import style from '../../styles/auth/Login.module.scss';
 
 //Componente padre para la utenticacion con Auth0
 const LoginButton = () => {
@@ -8,7 +9,12 @@ const LoginButton = () => {
 
   //Boton de para ejecutar la redireccion.
   return ( 
-    <button onClick={() => loginWithRedirect()}>
+    <button 
+      onClick={
+        () => loginWithRedirect()
+      }
+      className={ style.button }
+    >
       Log In
     </button>
   );

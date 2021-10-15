@@ -5,7 +5,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(20, 20, 20);
 }
 
 //Selector de elementos personalizado.
@@ -17,15 +17,21 @@ html, body {
 //Barra de scroll vertical 'eliminada'.
 ::-webkit-scrollbar {
   width: 5px;
+  background-color: rgb(15, 15, 15);
 }
 
 //scrollnar-thumb de el contenedor
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(42, 42, 42);
   border-radius: 999px;
 }
 
 //Estilo del scrollnar-thumb al ser clickeado
 ::-webkit-scrollbar-thumb:active {
   background-color: rgba(249, 249, 249, 1);
+}
+
+//Tamaño de los elemntos determinado por el borde
+* {
+  box-sizing: border-box;
 }

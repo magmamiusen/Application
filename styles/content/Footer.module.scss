@@ -1,0 +1,28 @@
+.wrapper {
+    background-color: rgb(0, 0, 0);
+    height: fit-content;
+    padding: 20px;
+
+    .text {
+        color: rgb(150, 150, 150);
+        text-align: center;
+        width: 100%;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        div {
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 50px;
+            }
+        }
+    }
+}

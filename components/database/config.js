@@ -5,13 +5,13 @@ import 'firebase/compat/storage';
 
 //Configuracion de las credenciales de nuestra app de firebase, para hacer la 'conexion'.
 const config = {
-  apiKey: "AIzaSyAskjmUru6MUqqN_2VHYe9q_yWBRhRPgL0",
-  authDomain: "recepy-application-cb38f.firebaseapp.com",
-  projectId: "recepy-application-cb38f",
-  storageBucket: "recepy-application-cb38f.appspot.com",
-  messagingSenderId: "446788631186",
-  appId: "1:446788631186:web:7bf3bcf200b16a01dc844b",
-  measurementId: "G-RJ58NTXEEJ"
+  apiKey: "AIzaSyB2xwN8OfA6cD-_zgfI-i5VxLbyk3HubDA",
+  authDomain: "recepy-aplication-v1.firebaseapp.com",
+  projectId: "recepy-aplication-v1",
+  storageBucket: "recepy-aplication-v1.appspot.com",
+  messagingSenderId: "869757248389",
+  appId: "1:869757248389:web:6a899f12e9913bb04b9aec",
+  measurementId: "G-WT0XGC5HX8"
 };
 
 //Inicializacion de la aplicacion.

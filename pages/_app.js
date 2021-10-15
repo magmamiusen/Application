@@ -1,5 +1,5 @@
 //Importacion del estilo global de la aplicacion.
-import '../styles/style.scss';
+import '../styles/global/style.scss';
 
 /*Componente inicializador de la aplicacion.
 Este componente recibe toda la informacion de nuestras paginas para renderizarlas.*/
