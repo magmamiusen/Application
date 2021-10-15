@@ -5,7 +5,7 @@ import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../components/auth/Login";
 import Initial from "../components/auth/Initial";
 import { useEffect } from "react";
-import Footer from "../components/content/Footer";
+import Footer from "../components/Footer";
 import style from '../styles/content/Index.module.scss'
 
 //Componente padre para redirigir a Auth0 y mostrar contenido de recepy.

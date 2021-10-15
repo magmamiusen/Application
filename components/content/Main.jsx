@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { useAuth0 } from '@auth0/auth0-react';
 import Special from '../database/Special';
 import Add from '../database/Add';
-import Footer from './Footer';
+import Footer from '../Footer';
 import LogoutButton from '../auth/Logout'
 
 //Componente padre para mostrar el contenido de la pagina.

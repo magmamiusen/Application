@@ -1,4 +1,4 @@
-import Footer from '../../components/content/Footer';
+import Footer from '../../components/Footer';
 import GetType from '../../components/database/GetType';
 
 const Pasteleria = () => {
