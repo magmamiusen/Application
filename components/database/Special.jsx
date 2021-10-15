@@ -2,26 +2,26 @@
 import { 
     useEffect, 
     useState 
-} from 'react';
-import style from '../../styles/content/Main.module.scss';
-import { dataBase } from './config';
-import { motion } from 'framer-motion';
-import styleModal from '../../styles/content/modalRecipe.module.scss';
+} from "react";
+import style from "../../styles/content/Main.module.scss";
+import { dataBase } from "./config";
+import { motion } from "framer-motion";
+import styleModal from "../../styles/content/modalRecipe.module.scss";
 
-//Componente 'special'
+//Componente "special"
 const Special = () => {
 
     //uso del estado para almacenar las recetas
     const [ recipes, setRecipes ] = useState([{ 
-        name: '',
+        name: ",
     },]);
     const [ index, setIndex ] = useState(0);
 
     useEffect( ()=> {
         //funcion para guardar la lista de datos que obtenemos
         const listGet = async () => {
-            const list = await dataBase.collection('recipes')
-            .orderBy('name')
+            const list = await dataBase.collection("recipes")
+            .orderBy("name")
             .limit(3)
             .get()
 
@@ -53,8 +53,8 @@ const Special = () => {
                             key={recipes.indexOf(doc)}
                             style={{ 
                                 background: `linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url(${doc.image})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
+                                backgroundSize: "cover",
+                                backgroundPosition: "center"
                             }}
                         >
                             <h1 className={style.title} >
@@ -88,8 +88,8 @@ const Special = () => {
                             src={recipes[index].video} 
                             controls
                             className={ styleModal.video } 
-                            alt={'video principal : ' + recipes[index].name}
-                            title={'video principal : ' + recipes[index].name}
+                            alt={"video principal : " + recipes[index].name}
+                            title={"video principal : " + recipes[index].name}
                         />
                         <h2>
                             Descripcion.

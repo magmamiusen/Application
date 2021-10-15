@@ -2,18 +2,18 @@
 import { 
     useEffect,
     useState 
-} from 'react';
-import { dataBase } from './config';
-import { motion } from 'framer-motion';
-import style from '../../styles/database/Get.module.scss';
-import styleModal from '../../styles/content/modalRecipe.module.scss';
+} from "react";
+import { dataBase } from "./config";
+import { motion } from "framer-motion";
+import style from "../../styles/database/Get.module.scss";
+import styleModal from "../../styles/content/modalRecipe.module.scss";
 
 //Componente para obtener los datos desde firebase.
 const GeneralGet = props => {
 
     //Declaracion del estado para almacenar en forma de array las recetas que estan almacenadas en firebase
     const [ recipes, setRecipes ] = useState([{ 
-        name: '',
+        name: ",
     },]);
     const [ index, setIndex ] = useState(0);
 
@@ -22,7 +22,7 @@ const GeneralGet = props => {
             
         //funcion para guardar la lista de datos que obtenemos
         const listGet = async () => {
-            const list = await dataBase.collection( 'recipes' )
+            const list = await dataBase.collection( "recipes" )
             .get()
 
             //Asignacion de la lista dentro de nuestro array
@@ -91,8 +91,8 @@ const GeneralGet = props => {
                             src={recipes[index].video} 
                             controls
                             className={ styleModal.video } 
-                            alt={'video principal : ' + recipes[index].name}
-                            title={'video principal : ' + recipes[index].name}
+                            alt={"video principal : " + recipes[index].name}
+                            title={"video principal : " + recipes[index].name}
                         />
                         <h2>
                             Descripcion.

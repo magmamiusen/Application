@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { dataBase } from './config';
-import style from '../../styles/database/GetType.module.scss';
-import styleModal from '../../styles/content/modalRecipe.module.scss';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { dataBase } from "./config";
+import style from "../../styles/database/GetType.module.scss";
+import styleModal from "../../styles/content/modalRecipe.module.scss";
+import { motion } from "framer-motion";
 
 const GetType = props => {
     
     const [ recipes, setRecipes ] = useState([{ 
-        name: '',
+        name: ",
     },]);
     const [ index, setIndex ] = useState(0);
 
@@ -15,8 +15,8 @@ const GetType = props => {
             
         //funcion para guardar la lista de datos que obtenemos
         const listGet = async () => {
-            const list = await dataBase.collection('recipes')
-            .where('type', '==', props.type)
+            const list = await dataBase.collection("recipes")
+            .where("type", "==", props.type)
             .get()
 
             //Asignacion de la lista dentro de nuestro array
@@ -38,7 +38,7 @@ const GetType = props => {
                             animate={{ scale: 1 }}
                             transition={{ 
                                 duration: 0,
-                                delay: '1.' + recipes.indexOf(doc) + 2
+                                delay: "1." + recipes.indexOf(doc) + 2
                             }}
                             href="#open-modal"
                             style={{backgroundImage: `url(${doc.image})`}} 
@@ -69,8 +69,8 @@ const GetType = props => {
                             src={recipes[index].video} 
                             controls
                             className={ styleModal.video } 
-                            alt={'video principal : ' + recipes[index].name}
-                            title={'video principal : ' + recipes[index].name}
+                            alt={"video principal : " + recipes[index].name}
+                            title={"video principal : " + recipes[index].name}
                         />
                         <h2>
                             Descripcion.
